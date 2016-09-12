@@ -19,8 +19,10 @@
 				font-family: 'Fjalla One', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif;
 				background-color: #111;
 				color: #eee;
-				font-size: 1.125em;
+				font-size: 1.125rem;
 				line-height: 1.25;}
+			@media screen and (min-width: 25rem) {html {font-size: 1.5rem;}}
+			@media screen and (min-width: 40rem) {html {font-size: 2rem;}}
 			body {
 				margin-bottom: 10rem;}
 			h1, h2 {
@@ -74,7 +76,8 @@
 				text-align: left;}
 			.roster li {
 				margin: auto;
-				width: 6em;
+				width: 30%;
+				min-width: 6em;
 				vertical-align: bottom;}
 			.roster .no {
 				vertical-align: bottom;
