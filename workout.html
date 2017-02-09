@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>HC Ultimate: Workout</title>
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<div class="wrapper intro">
+			<ul class="nav">
+				<li><a href="index.html" title="Home">Home</a></li>
+				<li><a href="sally.html" title="Home">Sally</a></li>
+				<li><a href="workout.html" title="Workout">Workout</a></li>
+			</ul>
+	
+			<h1>Hardcore Ultimate</h1>
+
+			<input id="input" type="text" placeholder="workout letters" maxlength="18" onkeyup="javascript:updateExercise();"/>
+
+			<ul id="exercise">
+			</ul>
+		</div>
+	</body>
+	
+	<script>
+		var catalog = {
+			A: "50 jumping jacks",
+			B: "20 crunches",
+			C: "30 squats",
+			D: "15 pushups",
+			E: "1min wall sit",
+			F: "10 burpees",
+			G: "20 arm circles",
+			H: "20 squats",
+			I: "30 jumping jacks",
+			J: "15 crunches",
+			K: "10 pushups",
+			L: "2min wall sit",
+			M: "20 burpees",
+			N: "25 burpees",
+			O: "40 jumping jacks",
+			P: "20 arm circles",
+			Q: "30 crunches",
+			R: "15 pushups",
+			S: "30 burpees",
+			T: "15 squats",
+			U: "30 arm circles",
+			V: "3min wall sit",
+			W: "20 burpees",
+			X: "60 jumping jacks",
+			Y: "10 crunches",
+			Z: "20 pushups",
+		}
+		var exercise = [];
+		
+		var s;
+		
+		var init = function () {
+			s = window.location.hash.substring(1);
+			if (s != "") {
+				var input = document.getElementById("input");
+				input.placeholder = s;
+			}
+		};
+		
+		var printExercise = function() {
+			s = s.toUpperCase();
+			var c, li, span;
+			var ul = document.getElementById("exercise");
+			
+			// wipe previous display
+			while (ul.firstChild) {
+				ul.removeChild(ul.firstChild);
+			}
+			
+			// assemble + print exercise
+			for (var i = 0; i < s.length; i++) {
+				c = s[i];
+				if (catalog[c] != undefined) {
+					exercise.push([c, catalog[c]]);
+					
+					li = document.createElement("li");
+					ul.appendChild(li);
+					
+					span = document.createElement("span");
+					li.appendChild(span);
+					span.innerText = c + ": ";
+					span.setAttribute("class", "letter");
+					
+					span = document.createElement("span");
+					li.appendChild(span);
+					span.innerText = catalog[c];
+					span.setAttribute("class", "exercise");
+				}
+			}
+		};
+		var updateExercise = function() {
+			var input = document.getElementById("input");
+			s = input.value;
+			printExercise();
+		};
+		
+		init();
+		printExercise();
+	</script>
+	
+</html>
