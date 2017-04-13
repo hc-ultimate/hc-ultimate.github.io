@@ -1,23 +1,29 @@
 @font-face {
-	font-family: 'Bandung HardcoreGP';
-	font-style: normal;
-	font-weight: normal;
-	src: local('Bandung HardcoreGP'), url('./fonts/Bandung%20Hardcore%20GP.woff') format('woff');
-}
+	font-family: 'Liberator';
+	src: url('./fontsLiberatorHeavy.eot');
+	src: local('Liberator Heavy'), local('LiberatorHeavy'),
+		url('./fontsLiberatorHeavy.eot?#iefix') format('embedded-opentype'),
+		url('./fontsLiberatorHeavy.woff') format('woff'),
+		url('./fontsLiberatorHeavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;}
+
 
 html {
 	font-family: 'Fjalla One', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif;
 	background-color: #111;
+	background-image: url('./assets/bg-pattern.png');
+	background-repeat: repeat;
+	background-size: 15%;
 	color: #eee;
 	font-size: 24px;
 	line-height: 1.25;}
 body {
 	margin-bottom: 10rem;}
 h1, h2 {
-	color: #bbb;
-	font-weight: normal;}
+	color: #bbb;}
 h2 {
-	font-family: "Bandung HardcoreGP";
+	font-family: "Liberator";
 	font-size: 3rem;
 	margin: 1em 0 0.25em;}
 ul {
@@ -55,7 +61,7 @@ input {
 	margin: 0 auto;}
 .footer {
 	padding: 1rem 0 2rem;
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.9);
 	position: fixed;
 	bottom: 0;
 	width: 100%;}
@@ -63,7 +69,7 @@ input {
 .intro h1 {
 	margin: 4rem 0;
 	height: 6rem;
-	background-image: url('./logo-header.svg');
+	background-image: url('./assets/logo-header.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -85,8 +91,8 @@ input {
 /* INDEX */
 
 .roster ul {
-	font-family: "Bandung HardcoreGP";
-	font-weight: normal;
+	font-family: "Liberator";
+	font-weight: 900;
 	font-size: 1.5rem;
 	display: flex;
 	justify-content: center;
