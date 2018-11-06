@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'Liberator';
-	src: url('./fontsLiberatorHeavy.eot');
+	src: url('./fonts/LiberatorHeavy.eot');
 	src: local('Liberator Heavy'), local('LiberatorHeavy'),
-		url('./fontsLiberatorHeavy.eot?#iefix') format('embedded-opentype'),
-		url('./fontsLiberatorHeavy.woff') format('woff'),
-		url('./fontsLiberatorHeavy.ttf') format('truetype');
+		url('./fonts/LiberatorHeavy.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/LiberatorHeavy.woff') format('woff'),
+		url('./fonts/LiberatorHeavy.ttf') format('truetype');
 	font-weight: 900;
 	font-style: normal;}
 
